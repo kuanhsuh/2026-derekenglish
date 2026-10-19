@@ -1,0 +1,13 @@
+# Local Netlify folder
+.netlify
+
+# Local dependencies and generated build files
+node_modules/
+dist/
+.astro/
+.DS_Store
+
+# Local environment files
+.env
+.env.*
+!.env.example

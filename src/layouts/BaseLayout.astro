@@ -1,0 +1,16 @@
+---
+import '../styles/global.css';
+import '../styles/speech.css';
+const { title = 'Grade 4 Vocabulary' } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><meta name="description" content="A friendly vocabulary practice tool for Grade 4 readers." /><title>{title}</title></head>
+  <body>
+    <header class="site-header"><a class="brand" href="/">Grade 4 <span>Vocabulary</span></a><nav class="desktop-nav"><a href="/">Home</a><a href="/learn/">Learn</a><a href="/quiz/">Quiz</a><a href="/review/">Review</a><a href="/words/">Words</a></nav><button class="speech-toggle" type="button" aria-label="Speech settings">🔊</button></header>
+    <div id="speech-settings" class="speech-settings" hidden></div>
+    <main><slot /></main>
+    <nav class="bottom-nav" aria-label="Main navigation"><a href="/">⌂<span>Home</span></a><a href="/learn/">📚<span>Learn</span></a><a href="/quiz/">✓<span>Quiz</span></a><a href="/review/">↻<span>Review</span></a><a href="/words/">≡<span>Words</span></a></nav>
+    <script>import { initSpeechSettings } from '../scripts/app.js'; initSpeechSettings();</script>
+  </body>
+</html>
